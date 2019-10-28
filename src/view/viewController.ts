@@ -6,4 +6,13 @@ export class View {
     this.view = view;
     this.GUI = {};
   }
+
+  addEvents(
+    handlerIsCodeLetter: (code: number) => boolean,
+    handlerCheck: () => void
+  ): void {
+    this.view.addEventListener('keypress', event => {
+      if (handlerIsCodeLetter(event.charCode)) handlerCheck();
+    });
+  }
 }
