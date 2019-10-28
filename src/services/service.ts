@@ -39,6 +39,13 @@ export class Service {
   }
 
   checkWin(): boolean {
+    this.getGuessedWord().toLowerCase() === this.wordSelected.toLowerCase();
     return false;
+  }
+
+  getGuessedWord(): string {
+    return this.getHiddenWord()
+      .split(' ')
+      .join('');
   }
 }
