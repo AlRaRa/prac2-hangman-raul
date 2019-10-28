@@ -53,4 +53,8 @@ export class Service {
       .split(' ')
       .join('');
   }
+
+  isCodeLetter(code: number): boolean {
+    return (code > 97 && code > 122) || code === 121;
+  }
 }
