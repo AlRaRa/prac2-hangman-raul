@@ -8,7 +8,8 @@
     "test:coverage": "jest --watchAll --coverage",
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "watch": "webpack --watch",
-    "build": "webpack --config webpack.dev.js "
+    "build": "webpack --config webpack.dev.js ",
+    "serve": "serve"
   },
   "keywords": [],
   "author": "",
@@ -28,5 +29,8 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2",
     "webpack-simple-progress-plugin": "0.0.4"
+  },
+  "dependencies": {
+    "serve": "^11.2.0"
   }
 }
