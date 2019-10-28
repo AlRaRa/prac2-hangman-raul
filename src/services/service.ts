@@ -55,6 +55,6 @@ export class Service {
   }
 
   isCodeLetter(code: number): boolean {
-    return (code > 97 && code > 122) || code === 121;
+    return (97 <= code && code <= 122) || code === 121;
   }
 }
