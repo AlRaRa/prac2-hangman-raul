@@ -1,0 +1,5 @@
+const CONSTANTE = 'VALOR';
+
+const CONSTANTE2 = 'VALOR2';
+
+export { CONSTANTE, CONSTANTE2 };
