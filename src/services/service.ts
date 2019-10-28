@@ -21,8 +21,8 @@ export class Service {
       .split('')
       .join(' ');
   }
-  isLetter(letter: string): boolean {
-    return false;
+  isLetterInWord(letter: string): boolean {
+    return this.wordSelected.toLowerCase().search(letter.toLowerCase()) > -1;
   }
 
   checkWin(): boolean {
