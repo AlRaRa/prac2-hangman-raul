@@ -10,7 +10,11 @@ export class Service {
     return fetch(url).then(response => response.json());
   }
 
-  initGame(): void {}
+  initGame(): void {
+    this.life = 7;
+    this.wordSelected = this.getRandomWord();
+    this.letterPressed = [];
+  }
 
   getRandomWord(): string {
     return this.words.sort(() => Math.random() - 0.5)[0];
@@ -23,6 +27,7 @@ export class Service {
       .split('')
       .join(' ');
   }
+
   isLetterInWord(letter: string): boolean {
     return this.wordSelected.toLowerCase().search(letter.toLowerCase()) > -1;
   }
