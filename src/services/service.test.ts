@@ -27,7 +27,7 @@ describe('#isLetter', () => {
     `(
       `when the letter: "$letter" isn't in the word: ${service.wordSelected}`,
       ({ letter }) => {
-        expect(service.isLetter(letter)).toBeTruthy();
+        expect(service.isLetter(letter)).toBeFalsy();
       }
     );
   });
