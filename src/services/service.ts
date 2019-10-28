@@ -1,5 +1,3 @@
-import { resolve } from 'url';
-
 export class Service {
   words: string[];
   wordSelected: string;
