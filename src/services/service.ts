@@ -25,6 +25,19 @@ export class Service {
     return this.wordSelected.toLowerCase().search(letter.toLowerCase()) > -1;
   }
 
+  pushLetterPressed(letter: string): void {
+    if (!this.isLetterPushed(letter)) this.letterPressed.push(letter);
+  }
+
+  isLetterPushed(letter: string): boolean {
+    return this.letterPressed.some(arrayLetter =>
+      this.isLettersEquals(letter, arrayLetter)
+    );
+  }
+  isLettersEquals(letter: string, letter2: string): boolean {
+    return letter.toLowerCase() === letter2.toLowerCase();
+  }
+
   checkWin(): boolean {
     return false;
   }
