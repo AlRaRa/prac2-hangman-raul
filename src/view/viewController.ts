@@ -19,4 +19,8 @@ export class View {
   printWord(word: string): void {
     console.log(word);
   }
+
+  printFail(fail: number): void {
+    console.log('nº fail: ', fail);
+  }
 }
