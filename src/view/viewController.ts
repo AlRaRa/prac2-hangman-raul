@@ -15,4 +15,8 @@ export class View {
       if (handlerIsCodeLetter(event.charCode)) handlerCheck();
     });
   }
+
+  printWord(word: string): void {
+    console.log(word);
+  }
 }
