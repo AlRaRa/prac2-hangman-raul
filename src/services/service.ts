@@ -6,12 +6,14 @@ export class Service {
   life: number;
   letterPressed: string[];
 
-  /*   getWords(): Promise {
-    return new Promise(resolve => resolve);
-  } */
+  getWords(url: string): Promise<JSON> {
+    return fetch(url).then(response => response.json());
+  }
+
   initGame(): void {}
-  getRamdomWord(): string {
-    return '';
+
+  getRandomWord(): string {
+    return this.words.sort(() => Math.random() - 0.5)[0];
   }
 
   getHiddenWord(): string {
