@@ -3,7 +3,7 @@ import { Service } from './service';
 let service = new Service();
 service.wordSelected = 'casa';
 
-describe('#isLetter', () => {
+describe('#isLetterInWord', () => {
   describe('should be true', () => {
     test.each`
       letter
@@ -13,7 +13,7 @@ describe('#isLetter', () => {
     `(
       `when the letter: "$letter" is in the word ${service.wordSelected}`,
       ({ letter }) => {
-        expect(service.isLetter(letter)).toBeTruthy();
+        expect(service.isLetterInWord(letter)).toBeTruthy();
       }
     );
   });
@@ -27,7 +27,7 @@ describe('#isLetter', () => {
     `(
       `when the letter: "$letter" isn't in the word: ${service.wordSelected}`,
       ({ letter }) => {
-        expect(service.isLetter(letter)).toBeFalsy();
+        expect(service.isLetterInWord(letter)).toBeFalsy();
       }
     );
   });
