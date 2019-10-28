@@ -1,5 +1,3 @@
-const CONSTANTE = 'VALOR';
+const URL = 'http://localhost:5000/src/data/words.json';
 
-const CONSTANTE2 = 'VALOR2';
-
-export { CONSTANTE, CONSTANTE2 };
+export { URL };
