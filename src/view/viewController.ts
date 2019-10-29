@@ -9,10 +9,10 @@ export class View {
 
   addEvents(
     handlerIsCodeLetter: (code: number) => boolean,
-    handlerCheck: () => void
+    handlerCheck: (letter: string) => void
   ): void {
     this.view.addEventListener('keypress', event => {
-      if (handlerIsCodeLetter(event.charCode)) handlerCheck();
+      if (handlerIsCodeLetter(event.charCode)) handlerCheck(event.key);
     });
   }
 
