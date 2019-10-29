@@ -34,6 +34,7 @@ export class Controller {
 
   wrongLetter(): void {
     this.view.printFail(this.service.life - 1);
-    if (this.service.lossLife()) this.view.finishGame(MSGFINISH.LOSE);
+    if (this.service.lossLife())
+      this.view.finishGame(MSGFINISH.LOSE + ' ' + this.service.wordSelected);
   }
 }
