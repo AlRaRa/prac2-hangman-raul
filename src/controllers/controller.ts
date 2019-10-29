@@ -31,5 +31,8 @@ export class Controller {
     if (this.service.checkWin()) this.view.finishGame(MSGFINISH.WIN);
   }
 
-  wrongLetter(): void {}
+  wrongLetter(): void {
+    this.view.printFail(this.service.life - 1);
+    if (this.service.lossLife()) this.view.finishGame(MSGFINISH.LOSE);
+  }
 }
