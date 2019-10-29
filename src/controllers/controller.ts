@@ -1,6 +1,6 @@
 import { Service } from '../services/service';
 import { View } from '../view/viewController';
-import { URL } from '../assets/constants/constants';
+import { URL, MSGFINISH } from '../assets/constants/constants';
 
 export class Controller {
   service: Service;
@@ -21,11 +21,15 @@ export class Controller {
 
   check = (letter: string): void => {
     this.service.isLetterInWord(letter)
-      ? this.correctLetter()
+      ? this.correctLetter(letter)
       : this.wrongLetter();
   };
 
-  correctLetter(): void {}
+  correctLetter(letter: string): void {
+    this.service.pushLetterPressed(letter);
+    this.view.printWord(this.service.getHiddenWord());
+    if (this.service.checkWin()) this.view.finishGame(MSGFINISH.WIN);
+  }
 
   wrongLetter(): void {}
 }
