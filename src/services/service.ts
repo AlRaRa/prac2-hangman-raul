@@ -4,8 +4,12 @@ export class Service {
   life: number;
   letterPressed: string[];
 
-  getWords(url: string): Promise<JSON> {
-    return fetch(url).then(response => response.json());
+  getWords(url: string): Promise<void> {
+    return fetch(url)
+      .then(response => response.json())
+      .then(words => {
+        this.words = words;
+      });
   }
 
   initGame(): void {
