@@ -48,8 +48,9 @@ export class Service {
   }
 
   checkWin(): boolean {
-    this.getGuessedWord().toLowerCase() === this.wordSelected.toLowerCase();
-    return false;
+    return (
+      this.getGuessedWord().toLowerCase() === this.wordSelected.toLowerCase()
+    );
   }
 
   getGuessedWord(): string {
