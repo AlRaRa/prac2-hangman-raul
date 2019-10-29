@@ -15,6 +15,7 @@ export class Controller {
   }
 
   startGame(): void {
+    this.service.initGame();
     this.view.addEvents(this.service.isCodeLetter, this.check);
     this.view.printWord(this.service.getHiddenWord());
   }
