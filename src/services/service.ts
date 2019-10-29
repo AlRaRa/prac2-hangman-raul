@@ -57,4 +57,9 @@ export class Service {
   isCodeLetter(code: number): boolean {
     return (97 <= code && code <= 122) || code === 121;
   }
+
+  lossLife(): boolean {
+    --this.life;
+    return this.life === 0;
+  }
 }
