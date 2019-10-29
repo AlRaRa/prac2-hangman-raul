@@ -23,4 +23,8 @@ export class View {
   printFail(fail: number): void {
     console.log('nº fail: ', fail);
   }
+
+  finishGame(msg: string) {
+    console.log(msg);
+  }
 }
