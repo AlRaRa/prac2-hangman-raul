@@ -14,5 +14,18 @@ export class Controller {
     });
   }
 
-  startGame(): void {}
+  startGame(): void {
+    this.view.addEvents(this.service.isCodeLetter, this.check);
+    this.view.printWord(this.service.getHiddenWord());
+  }
+
+  check = (letter: string): void => {
+    this.service.isLetterInWord(letter)
+      ? this.correctLetter()
+      : this.wrongLetter();
+  };
+
+  correctLetter(): void {}
+
+  wrongLetter(): void {}
 }
